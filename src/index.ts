@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from 'express';
 import Routes from './routes';
 
@@ -8,4 +9,4 @@ const port = process.env.PORT || 3001
 app.use(express.json())
 app.use(routes.router)
 
-app.listen(port, () => { `Server running on port ${port}` })
+app.listen(port, () => { console.log(`Server running on port ${port}`) })
